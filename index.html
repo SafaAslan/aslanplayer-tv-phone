@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AslanPlayer · TV'ye gönder</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#070404;color:#f4ecec;font:17px/1.4 system-ui,sans-serif;padding:20px}
+main{max-width:480px;margin:0 auto}h1{font-size:24px;margin:0 0 4px}p.s{color:#b8aaaa;margin:0 0 18px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}.tabs button{flex:1;padding:10px;border-radius:999px;border:2px solid #332020;background:none;color:#b8aaaa;font:inherit}
+.tabs button.on{background:#e5222b;border-color:#e5222b;color:#fff}label{display:block;margin:12px 0 4px;color:#b8aaaa;font-size:14px}
+input{width:100%;padding:14px;border-radius:12px;border:2px solid #857878;background:#181010;color:inherit;font:inherit}
+.go{width:100%;margin-top:20px;padding:16px;border:0;border-radius:12px;background:#e5222b;color:#fff;font:600 18px system-ui}
+#msg{margin-top:14px;min-height:24px}.ok{color:#5fd38d}.err{color:#ffb347}
+</style></head><body><main>
+<h1>AslanPlayer</h1><p class="s">Listeni buradan gir, TV'ne şifreli gönderilsin.</p>
+<div class="tabs"><button id="t-x" class="on">Xtream</button><button id="t-m">M3U</button></div>
+<div id="f-x"><label>Liste adı</label><input id="x-name"><label>Sunucu adresi</label><input id="x-host" inputmode="url" autocapitalize="off" placeholder="http://sunucu:8080"><label>Kullanıcı adı</label><input id="x-user" autocapitalize="off"><label>Şifre</label><input id="x-pass" type="password"></div>
+<div id="f-m" hidden><label>Liste adı</label><input id="m-name"><label>M3U adresi</label><input id="m-url" inputmode="url" autocapitalize="off"><label>Program rehberi adresi (isteğe bağlı)</label><input id="m-epg" inputmode="url" autocapitalize="off"></div>
+<button class="go" id="send">TV'ye gönder</button><div id="msg"></div>
+</main><script src="page.js"></script></body></html>
