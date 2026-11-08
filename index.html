@@ -11,11 +11,12 @@ input{width:100%;padding:14px;border-radius:12px;border:2px solid #857878;backgr
 #msg{margin-top:14px;min-height:24px}.ok{color:#5fd38d}.err{color:#ffb347}
 </style></head><body><main>
 <h1>AslanPlayer</h1><p class="s">Listeni buradan gir, TV'ne şifreli gönderilsin.</p>
-<div class="tabs"><button id="t-x" class="on">Xtream</button><button id="t-m">M3U</button><button id="t-f">Dosya</button><button id="t-b">Yedek</button></div>
+<div class="tabs"><button id="t-x" class="on">Xtream</button><button id="t-m">M3U</button><button id="t-f">Dosya</button><button id="t-b">Yedek</button><button id="t-s">Altyazı</button></div>
 <div id="f-x"><label>Liste adı</label><input id="x-name"><label>Sunucu adresi</label><input id="x-host" inputmode="url" autocapitalize="off" placeholder="http://sunucu:8080"><label>Kullanıcı adı</label><input id="x-user" autocapitalize="off"><label>Şifre</label><input id="x-pass" type="password"></div>
 <div id="f-m" hidden><label>Liste adı</label><input id="m-name"><label>M3U adresi</label><input id="m-url" inputmode="url" autocapitalize="off"><label>Program rehberi adresi (isteğe bağlı)</label><input id="m-epg" inputmode="url" autocapitalize="off"></div>
 <div id="f-f" hidden><label>Liste adı</label><input id="f-name"><label>M3U / M3U8 dosyası</label><input id="f-file" type="file" accept=".m3u,.m3u8,text/plain,audio/x-mpegurl,application/vnd.apple.mpegurl"><p class="s" id="f-info"></p></div>
 <div id="f-b" hidden><label>AslanPlayer yedek dosyası (.json)</label><input id="b-file" type="file" accept=".json,application/json"><p class="s">Yedek, TV'de "Yedeği telefona gönder" ile alınır. İçinde liste şifren olabilir; dosyayı kimseyle paylaşma.</p></div>
+<div id="f-s" hidden><label>Altyazı dosyası (.srt / .vtt)</label><input id="s-file" type="file" accept=".srt,.vtt,text/plain,text/vtt"><p class="s">TV'de film izlerken ses/altyazı menüsünden bu sayfayı açtın; dosya yalnızca o TV'ye gider.</p></div>
 <div id="recv" hidden><p class="s" id="recv-msg">Yedek aranıyor…</p><a class="go" id="recv-dl" hidden style="display:none;text-align:center;text-decoration:none">Yedeği indir</a></div>
 <button class="go" id="send">TV'ye gönder</button><div id="msg"></div>
 </main><script src="page.js"></script></body></html>
